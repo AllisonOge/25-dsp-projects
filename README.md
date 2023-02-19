@@ -5,15 +5,15 @@ An detailed and comprehensive walkthrough of 25 popular industry-based projects 
 - Wireless Networks and so on.
 
 ## Tentative projects
-- Removal of Background from Image using MATLAB
+- Removal of Background from Image
 - Defect Detection In Ceramic Tiles
 - Fruit Recognition Using Color Analysis
 - Signature Verification System
 - Image Authentication Based On Watermarking Approach
 - Person Identification Based On Teeth Recognition
-- Traffic Signs Detection Using Matlab
+- Traffic Signs Detection
 - Digital Watermarking To Hide Text Messages
-- Symbol Recognition Using Matlab
+- Symbol Recognition
 - Hand Gesture Recognition Project
 - Orange Fruit Recognition Using Image Segmentation
 - Optical character extraction under different illumination conditions
@@ -26,7 +26,7 @@ An detailed and comprehensive walkthrough of 25 popular industry-based projects 
 - Railway Track Fault Detection Project
 - Bone Fracture Detection System
 - Image Blurring & Deblurring With Noise Removal
-- Wall Crack Detection Using Matlab
+- Wall Crack Detection
 - CCTV Theft Detection & Tracking
 - Object Tracker Based on Color
 - Dental Caries Detection System
