@@ -1,0 +1,199 @@
+\documentclass[12pt, a4paper, oneside, notitlepage]{book}
+
+% set spacing
+\usepackage{setspace}
+
+% hyper reference
+\usepackage{hyperref}
+
+% fullwidth
+\usepackage{fullwidth}
+
+% just some sample text
+\usepackage{lipsum}
+
+% set font family
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+
+% for nicely typeset tabular material
+\usepackage{booktabs}
+
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+% customize make the title page
+\makeatletter
+\renewcommand{\maketitle}{%
+\newpage
+\begin{fullwidth}
+\null\vfill
+\vskip 20pt
+
+\begin{flushleft}
+{\huge \bfseries \@title \par}%
+\vskip 1em%
+{\small 1st Edition \par}%
+\vskip 10em%
+{\large 
+\lineskip .75em%
+\begin{tabular}[t]{l}%
+\bfseries \@author
+\end{tabular}\par}%
+{\small \hspace*{1mm} \textit{Affiliation of the author} \par}%
+\end{flushleft} \par%
+\@thanks
+\vfill\null
+\end{fullwidth}%
+}
+\makeatother
+
+% customize the headings 
+% chapter*
+%\usepackage[explicit]{titlesec}
+%\titleformat{\chapter*}[display]
+%{}
+%{}
+%{0pt}
+%{}{}
+%% chapter
+%\titleformat{\chapter}[display]
+%{}
+%{}
+%{0pt}
+%{}{}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\vspace*{\fill}This page was intentionally left blank\vspace*{\fill}}
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+% book metadata
+\title{Title of the book}
+\author{Author of the book}
+%\publisher{Publisher of the book}
+
+% Frontmatter
+\frontmatter
+
+\blankpage
+
+% full title page
+\maketitle
+
+\blankpage
+
+% v.4 copyright page
+\newpage
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \author\
+
+%\par\smallcaps{Published by \thanklesspublisher}
+
+
+\par No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means,
+electronic, mechanical, photocopying, recording, scanning, or otherwise, except as permitted under Section 107 or 108 of
+the 1976 United States Copyright Act, without either the prior written permission of the Publisher or authorization through
+payment of the appropriate per-copy fee to the Copyright Clearance Center, Inc., 222 Rosewood Drive, Danvers, MA
+01923, (978) 750-8400, fax (978) 750-4470, or on the web at www.copyright.com. Requests to the Publisher for permission
+should be addressed to the Permissions Department, John Wiley \& Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201)
+748-6011, fax (201) 748-6008, or online at \url{http://www.wiley.com/go/permission}.
+
+
+Limit of Liability/Disclaimer of Warranty: While the publisher and author have used their best efforts in preparing this
+book, they make no representations or warranties concerning the accuracy or completeness of the contents of this book
+and specifically disclaim any implied warranties of merchantability or fitness for a particular purpose. No warranty may be
+created or extended by sales representatives or written sales materials. The advice and strategies contained herein may not
+be suitable for your situation. You should consult with a professional where appropriate. Neither the publisher nor the author
+shall be liable for any loss of profit or any other commercial damages, including but not limited to special, incidental,
+consequential, or other damages.
+
+
+For general information on our other products and services or for technical support, please contact our Customer Care
+Department within the United States at (800) 762-2974, outside the United States at (317) 572-3993 or fax (317) 572-4002.
+Wiley also publishes its books in a variety of electronic formats. Some content that appears in print may not be available in
+electronic formats. For more information about Wiley products, visit our website at \url{www.wiley.com}.\index{license}
+
+\par\textit{First printing, \monthyear}
+\end{fullwidth}
+
+% r.4 dedication
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+%\noindent\fontsize{18}{22}\selectfont\itshape
+%\nohyphenation
+Dedicated to those who appreciate \LaTeX{} 
+and the work of \mbox{Edward R.~Tufte} 
+and \mbox{Donald E.~Knuth}.
+\end{doublespace}
+\vfill
+\vfill
+
+% r.5 contents
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\chapter*{Preface}
+\lipsum[3]
+
+% Mainmatter
+\mainmatter
+
+%\chapter{On the use of this template}
+%The template uses the \mbox{book} document class with a couple of packages and custom changes. The style of this template improves the default settings to incorporate rich features like tight integration of graphics with text and well-set typography. This document aims to be at once a demonstration of the features of this template and a style guide to their use.
+%
+%\section{Page Layout}
+%\subsection{Headings}\index{headings}
+%This styling of the \verb|\section| and \verb|\subsection| are shown above. The heading levels include parts, chapters, sections, subsections, and paragraphs.
+%
+%\begin{table}[h]
+%  \begin{center}
+%    \footnotesize%
+%    \begin{tabular}{lcr}
+%      \toprule
+%    \bfseries  Heading & \bfseries Style & \bfseries Size \\
+%      \midrule
+%      Part & roman &24pt \\
+%      Chapter & bold & 14pt \\
+%      Section & bold &13pt \\
+%      Subsection & bold & 11pt \\
+%      Paragraph & normal & 11pt \\
+%      \bottomrule
+%    \end{tabular}
+%  \end{center}
+%  \caption{Heading styles used in template}
+%  \label{tab:heading-styles}
+%\end{table}
+%
+%\section{References}\index{references}
+%
+%\section{Figures and Tables}\index{figures and tables}
+% Backmatter
+
+
+\include{./removal-of-background-from-image/removal-of-background-from-image.tex}
+
+\backmatter
+
+\printindex
+\end{document}

@@ -1,5 +1,5 @@
 # 25-dsp-projects
-An detailed and comprehensive walkthrough of 25 popular industry-based projects in the following research areas;
+An detailed and comprehensive walkthrough of 25 popular industry-based digital signal processing projects in the following research areas;
 - Computer Vision
 - Image Processing
 - Wireless Networks and so on.
